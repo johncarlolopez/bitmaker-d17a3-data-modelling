@@ -1,3 +1,4 @@
+![Bitmaker](https://github.com/johncarlolopez/bitmaker-reference/blob/master/bitmakerlogo.svg)
 # 03 - Data Modelling: Many to Many
 ### Wednesday, Jan 3rd
 
