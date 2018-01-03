@@ -158,3 +158,85 @@ Sheet music (one) - (one) instrument
     * name(string)
 
 # Part 3
+
+1. user, restaurant, dish, order
+
+Restaurant (one) - (many) dishes
+Restaurant (one) - (many) orders
+Order (many) - (many) dishes
+User (one) - (many) orders
+
+
+  * User
+    * id(integer)
+    * name(string)
+  * Restaurant
+    * id(integer)
+    * name(string)
+  * Dish
+    * id(integer)
+    * name(string)
+    * restaurant_id(integer)(foreign key)
+  * Dishes_in_order
+    * id(integer)
+    * dish_id(integer)(foreign key)
+    * order_id(integer)(foreign key)
+  * Order
+    * id(integer)
+    * name(string)
+    * user_id(integer)(foreign key)
+    * restaurant_id(integer)(foreign key)
+
+2. Airline, flight, passenger, crew
+
+Airline (one) - (many) flights
+Airline (one) - (many) crew
+Flight (many) - (many) passengers
+Flight (many) - (many) crew
+
+  * Airline
+    * id(integer)
+    * name(string)
+  * Crew
+    * id(integer)
+    * name(string)
+    * airline_id(integer)(foreign key)
+  * Passenger
+    * id(integer)
+    * name(string)
+  * Flight_passenger_manifest
+    * id(integer)
+    * passenger_id(integer)(foreign key)
+    * flight_id(integer)(foreign key)
+  * Flight_crew_manifest
+    * id(integer)
+    * crew_id(integer)(foreign key)
+    * flight_id(integer)(foreign key)
+  * Flight
+    * id(integer)
+    * name(string)
+    * airline_id(integer)(foreign key)
+    * from_destination(string)
+    * to_destination(string)
+    * departure_time(string)
+
+3. artist, track, user
+
+Artist (one) - (many) tracks
+User (many) - (many) artists
+Artist (one) - (many) tracks
+
+  * Artist
+    * id(integer)
+    * name(string)
+  * Subscription
+    * id(integer)
+    * user_id(integer)(foreign key)
+    * artist_id(integer)(foreign key)
+  * User
+    * id(integer)
+    * name(string)
+  * Track
+    * id(integer)
+    * name(string)
+    * artist_id(integer)(foreign key)
